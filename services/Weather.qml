@@ -36,7 +36,7 @@ Singleton {
     Process {
         id: wttrProc
 
-        command: ["curl", `https://wttr.in/${root.loc}?format=j1`]
+        command: ["curl", `https://wttr.in/szg?format=j1`]
         stdout: StdioCollector {
             onStreamFinished: {
                 const json = JSON.parse(text).current_condition[0];

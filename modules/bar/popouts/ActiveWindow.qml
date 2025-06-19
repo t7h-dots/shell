@@ -27,7 +27,7 @@ Item {
                 id: icon
 
                 implicitSize: details.implicitHeight
-                source: Icons.getAppIcon(Hyprland.activeClient?.wmClass ?? "", "image-missing")
+                source: Icons.getAppIcon(Hyprland.activeClient?.wmClass ?? "", "nix-snowflake")
             }
 
             Column {

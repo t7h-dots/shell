@@ -220,9 +220,9 @@ Item {
         anchors.bottomMargin: Appearance.padding.large
         anchors.margins: Appearance.padding.large * 2
 
-        playing: root.shouldUpdate && (Players.active?.isPlaying ?? false)
-        speed: BeatDetector.bpm / 300
-        source: "root:/assets/bongocat.gif"
+        playing: (Players.active?.isPlaying ?? false)
+        speed: 1
+        source: "root:/assets/synth_circle.gif"
         asynchronous: true
         fillMode: AnimatedImage.PreserveAspectFit
     }

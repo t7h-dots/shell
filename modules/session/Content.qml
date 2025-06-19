@@ -47,18 +47,6 @@ Column {
         KeyNavigation.down: hibernate
     }
 
-    AnimatedImage {
-        width: Config.session.sizes.button
-        height: Config.session.sizes.button
-        sourceSize.width: width
-        sourceSize.height: height
-
-        playing: visible
-        asynchronous: true
-        speed: 0.7
-        source: "root:/assets/kurukuru.gif"
-    }
-
     SessionButton {
         id: hibernate
 

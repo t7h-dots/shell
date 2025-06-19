@@ -397,7 +397,7 @@ Item {
                                     IconImage {
                                         id: playerIcon
 
-                                        source: Icons.getAppIcon(player.modelData.identity, "image-missing")
+                                        source: Icons.getAppIcon(player.modelData.identity, "nix-snowflake")
                                         implicitSize: Math.round(identity.implicitHeight * 0.9)
                                     }
 
@@ -490,7 +490,7 @@ Item {
             }
 
             Control {
-                icon: "delete"
+                icon: "close"
                 canUse: Players.active?.canQuit ?? false
                 fontSize: Appearance.font.size.larger
                 padding: Appearance.padding.small
@@ -520,9 +520,9 @@ Item {
             width: visualiser.width * 0.75
             height: visualiser.height * 0.75
 
-            playing: root.shouldUpdate && (Players.active?.isPlaying ?? false)
-            speed: BeatDetector.bpm / 300
-            source: "root:/assets/bongocat.gif"
+            playing: (Players.active?.isPlaying ?? false)
+            speed: 1
+            source: "root:/assets/synth_circle.gif"
             asynchronous: true
             fillMode: AnimatedImage.PreserveAspectFit
         }
