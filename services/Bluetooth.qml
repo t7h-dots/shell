@@ -43,7 +43,6 @@ Singleton {
         id: getDevices
 
         running: true
-<<<<<<< HEAD
         command: ["sh", "-c", `
             for a in $(bluetoothctl devices); do
                 case "$a" in
@@ -54,19 +53,10 @@ Singleton {
                         ;;
                 esac
             done`]
-=======
-        command: ["fish", "-c", `
-            for a in (bluetoothctl devices)
-                if string match -q 'Device *' $a
-                    bluetoothctl info $addr (string split ' ' $a)[2]
-                    echo
-                end
-            end`]
         environment: ({
                 LANG: "C.UTF-8",
                 LC_ALL: "C.UTF-8"
             })
->>>>>>> b13b6de (network: fix for non english locales)
         stdout: StdioCollector {
             onStreamFinished: {
                 const devices = text.trim().split("\n\n").map(d => ({
