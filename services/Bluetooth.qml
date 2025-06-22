@@ -28,8 +28,8 @@ Singleton {
         running: true
         command: ["bluetoothctl", "show"]
         environment: ({
-                LANG: "C.UTF-8",
-                LC_ALL: "C.UTF-8"
+                LANG: "C",
+                LC_ALL: "C"
             })
         stdout: StdioCollector {
             onStreamFinished: {
@@ -54,8 +54,8 @@ Singleton {
                 esac
             done`]
         environment: ({
-                LANG: "C.UTF-8",
-                LC_ALL: "C.UTF-8"
+                LANG: "C",
+                LC_ALL: "C"
             })
         stdout: StdioCollector {
             onStreamFinished: {
