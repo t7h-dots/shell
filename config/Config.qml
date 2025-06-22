@@ -14,6 +14,11 @@ Singleton {
     property alias notifs: adapter.notifs
     property alias osd: adapter.osd
     property alias session: adapter.session
+<<<<<<< HEAD
+=======
+    property alias winfo: adapter.winfo
+    property alias lock: adapter.lock
+>>>>>>> 2a652d5 (feat: lock screen)
     property alias paths: adapter.paths
 
     FileView {
@@ -32,6 +37,11 @@ Singleton {
             property JsonObject notifs: NotifsConfig {}
             property JsonObject osd: OsdConfig {}
             property JsonObject session: SessionConfig {}
+<<<<<<< HEAD
+=======
+            property JsonObject winfo: WInfoConfig {}
+            property JsonObject lock: LockConfig {}
+>>>>>>> 2a652d5 (feat: lock screen)
             property JsonObject paths: UserPaths {}
         }
     }
