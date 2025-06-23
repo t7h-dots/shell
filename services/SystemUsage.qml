@@ -181,7 +181,7 @@ Singleton {
                     else if (line === "")
                         eligible = false;
                     else if (eligible) {
-                        const match = line.match(/^(temp[0-9]+|GPU core|edge)+:\s+\+([0-9]+\.[0-9]+)°C/);
+                        const match = line.match(/^(temp[0-9]+|GPU core|edge)+:\s+\+([0-9]+\.[0-9]+)(°| )C/);
                         if (match) {
                             sum += parseFloat(match[2]);
                             count++;
